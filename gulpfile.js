@@ -8,7 +8,7 @@ const cleanCSS   	 = require('gulp-clean-css');
 const include     	 = require('gulp-include');
 const plumber     	 = require('gulp-plumber');
 const del     		 = require('del');
-
+const mmq        = require('gulp-merge-media-queries');
 let path = {
 	src: {
 		html: 'app/*.html',
@@ -65,6 +65,9 @@ gulp.task('style', function(){
 			browsers: ['last 2 versions'],
 			cascade: false 
 		}))
+		.pipe(mmq({
+			log: false
+		}))
 		.pipe(cleanCSS({
 			level: 2
 		}))
@@ -107,6 +110,9 @@ gulp.task('deploy:style', function(){
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions'],
 			cascade: false 
+		}))
+		.pipe(mmq({
+			log: false
 		}))
 		.pipe(cleanCSS({
 			level: 2
