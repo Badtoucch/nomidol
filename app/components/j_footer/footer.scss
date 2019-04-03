@@ -8,10 +8,13 @@
 
 .footer__wrap {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
-
+.ev-footer__logo svg{
+	width: 54px;
+	height: 54px;
+}
 .footer__left {
 	display: flex;
 	justify-content: flex-start;
