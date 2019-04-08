@@ -2,18 +2,35 @@
 	padding-top: 77px
 	padding-bottom: 80px
 	background: url('../img/bg-use.png') no-repeat center top
+	background-size: cover
+	+r(1189)
+		padding: 60px 0
 	&__title
 		margin-bottom: 50px
 		.color
 			color: #f68b1f
+		+r(1023)
+			margin-bottom: 40px
+		+r(639)
+			margin-bottom: 20px
 	&__content
 		display: flex
 		justify-content: space-around
 		margin-bottom: 45px
 		counter-reset: section
+		+r(1023)
+			margin-bottom: 30px
+		+r(767)
+			flex-wrap: wrap
 	.wrap-img
 		margin-bottom: 30px
 		position: relative
+		+r(1023)
+			margin-bottom: 20px
+		+r(639)
+			margin-bottom: 10px
+		+r(479)
+			margin-bottom: 5px
 		&:after
 			counter-increment: section
 			content: counter(section)
@@ -40,10 +57,34 @@
 				&:after
 					top: auto
 					bottom: 0
+		+r(1023)
+			max-width: 230px
+			&:nth-of-type(odd)
+				margin-top: 0
+		+r(767)
+			&:nth-of-type(-n+2)
+				margin-bottom: 20px
+			&:nth-of-type(odd)
+				.wrap-img
+					&:after
+						top: 0
+						bottom: auto
+		+r(639)
+			max-width: 200px
+		+r(479)
+			&:nth-of-type(-n+2)
+				margin-bottom: 25px
+		&__img
+			max-width: 100%
 		&__text
 			color: #444444
 			font-size: 20px
 			line-height: 28px
+			+r(767)
+				line-height: 24px
+			+r(479)
+				font-size: 18px
+				line-height: 22px
 	&__desc
 		text-align: center
 		color: #000000
@@ -56,6 +97,14 @@
 		border-radius: 35px
 		margin: auto
 		margin-bottom: 50px
+		+r(1023)
+			margin-bottom: 30px
+			line-height: 50px
+			font-size: 23px
+		+r(479)
+			max-width: 278px
+			line-height: 1
+			padding: 10px
 	&__btn
 		width: 242px
 		margin: auto
