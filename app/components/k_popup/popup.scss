@@ -1,0 +1,62 @@
+.ever-popup__inner {
+	width: 902px!important
+}
+.popup__wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 56px 77px 59px 40px;
+	background: #fff;
+	border-radius: 5px
+}
+.popup__pack {
+	-ms-flex-item-align: center;
+	align-self: center
+}
+.pack-abs-pakcBox {
+	position: relative;
+	width: 384px;
+	margin-left: 73px
+}
+.pack-abs__pils {
+	position: absolute;
+	left: -73px;
+	bottom: -47px
+}
+.ever-popup .ever-popup__inner {
+	padding-top: 0
+}
+.ever-popup .ever-popup__close {
+	top: 25px;
+	right: 25px;
+	width: 23px;
+	height: 23px
+}
+.ever-popup .ever-popup__close::before, .ever-popup .ever-popup__close::after {
+	right: -4px;
+	width: 32px;
+	height: 3px;
+	background-color: #f64d01
+}
+@media screen and (max-width:999px) {
+	.ever-popup .ever-popup__inner {
+		padding-top: 27px
+	}
+	.ever-popup .ever-popup__close {
+		top: 0;
+		right: 6px
+	}
+	.ever-popup__inner {
+		width: 270px!important
+	}
+	.popup__wrap {
+		padding: 0;
+		background: transparent
+	}
+	.popup__pack {
+		display: none
+	}
+}
