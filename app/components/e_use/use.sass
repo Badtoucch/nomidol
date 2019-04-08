@@ -1,0 +1,61 @@
+.use
+	padding-top: 77px
+	padding-bottom: 80px
+	background: url('../img/bg-use.png') no-repeat center top
+	&__title
+		margin-bottom: 50px
+		.color
+			color: #f68b1f
+	&__content
+		display: flex
+		justify-content: space-around
+		margin-bottom: 45px
+		counter-reset: section
+	.wrap-img
+		margin-bottom: 30px
+		position: relative
+		&:after
+			counter-increment: section
+			content: counter(section)
+			position: absolute
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			width: 42px
+			height: 42px
+			background-color: #f68b1f
+			border-radius: 50%
+			color: #ffffff
+			font-size: 34px
+			font-weight: 900
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+	.item
+		max-width: 272px
+		text-align: center
+		&:nth-of-type(odd)
+			margin-top: 30px
+			.wrap-img
+				&:after
+					top: auto
+					bottom: 0
+		&__text
+			color: #444444
+			font-size: 20px
+			line-height: 28px
+	&__desc
+		text-align: center
+		color: #000000
+		font-size: 25px
+		font-weight: 500
+		border: 2px solid #f68b1f
+		max-width: 508px
+		width: 100%
+		line-height: 65px
+		border-radius: 35px
+		margin: auto
+		margin-bottom: 50px
+	&__btn
+		width: 242px
+		margin: auto

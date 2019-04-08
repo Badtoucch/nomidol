@@ -1,0 +1,251 @@
+.composition
+	padding-top: 60px
+	padding-bottom: 75px
+	&__top
+		display: flex
+		justify-content: center
+		padding-bottom: 52px
+		margin-left: -70px
+		+r(1189)
+			margin-left: 0
+		+r(1023)
+			flex-direction: column
+			justify-content: center
+			text-align: center
+			align-items: center
+			padding-bottom: 40px
+		+r(479)
+			padding-bottom: 25px
+	.prod
+		margin-right: 65px
+		+r(1189)
+			margin-right: 40px
+		+r(1023)
+			margin-right: 0
+	.content
+		margin-top: 19px
+		max-width: 445px
+		flex-shrink: 0
+		margin-right: 118px
+		position: relative
+		+r(1189)
+			margin-right: 0
+		+r(1023)
+			max-width: 375px
+		+r(479)
+			margin-top: 15px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 25px
+			right: -188px
+			width: 163px
+			height: 49px
+			background-size: cover
+			background: url('../img/arrow.svg') no-repeat center
+			+r(1023)
+				display: none
+		&__ttl
+			color: #000000
+			font-size: 54px
+			font-weight: 600
+			+r(1023)
+				font-size: 42px
+			+r(479)
+				font-size: 32px
+		&__text
+			font-weight: 500
+			font-size: 30px
+			color: #444444
+			+r(1023)
+				font-size: 24px
+			+r(479)
+				font-size: 22px
+				line-height: 22px
+	&__btn
+		max-width: 300px
+		margin-top: 37px
+		+r(1189)
+			flex-shrink: 0
+			margin-left: auto
+		+r(1023)
+			margin-left: 0
+		+r(479)
+			margin-top: 15px
+	.color
+		color: #f68b1f
+	.line
+		width: 100%
+		position: relative
+		border-bottom: 1px solid transparentize(#cacaca, 0.58)
+		margin-bottom: 64px
+		+r(1023)
+			margin-bottom: 45px
+		+r(479)
+			margin-bottom: 30px
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			width: 0
+			height: 0
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -15px
+			border-style: solid
+			border-width: 15px 17.5px 0 17.5px
+			border-color: transparentize(#cacaca, 0.58) transparent transparent transparent
+			z-index: 2
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			width: 0
+			height: 0
+			left: 50%
+			transform: translateX(-50%)
+			bottom: -14px
+			border-style: solid
+			border-width: 15px 17.5px 0 17.5px
+			border-color: white transparent transparent transparent
+			z-index: 3
+.composition
+	&__title
+		margin-bottom: 5px
+	&__desc
+		text-align: center
+		color: #444444
+		font-size: 24px
+		font-weight: 500
+		margin-bottom: 55px
+		+r(1023)
+			margin-bottom: 30px
+			font-size: 22px
+		+r(639)
+			font-size: 20px
+	&__rows
+		position: relative
+	.row
+		display: flex
+		justify-content: space-between
+		text-align: center
+		&:not(:last-of-type)
+			margin-bottom: 44px
+			.row__item
+				&:nth-child(1)
+					.row__img
+						&::before
+							right: -37px
+							transform: rotate(-180deg) translateY(51%) scale(-1,1)
+							+r(1189)
+								right: -7px
+							+r(1023)
+								display: none
+				&:nth-child(2)
+					.row__img
+						&::before
+							left: -59px
+							transform: rotate(179deg) translateY(57%)
+							+r(1189)
+								left: -7px
+							+r(1023)
+								display: none
+		+r(479)
+			flex-direction: column
+			&:not(:last-of-type)
+				margin-bottom: 30px
+		&__item
+			max-width: 395px
+			width: 100%
+			&--last
+				margin-top: -12px
+				+r(479)
+					margin-top: 0
+			&:nth-child(1)
+				.row__img
+					&::before
+						right: -38px
+						transform: rotate(-1deg) translateY(7%)
+						+r(1189)
+							right: -7px
+						+r(1023)
+							display: none
+			&:nth-child(2)
+				.row__img
+					&::before
+						left: -59px
+						transform: rotate(-1deg) translateY(25%) scale(-1,1)
+						+r(1189)
+							left: -7px
+						+r(1023)
+							display: none
+			+r(1023)
+				max-width: 275px
+			+r(767)
+				max-width: 48%
+			+r(479)
+				max-width: 100%
+				&:not(:last-of-type)
+					margin-bottom: 30px
+		&__img
+			margin-bottom: 8px
+			position: relative
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				width: 117px
+				height: 35px
+				background: url('../img/arrow.svg') no-repeat center
+				background-size: cover
+		&__ttl
+			font-size: 22px
+			font-weight: 500
+			margin-bottom: 8px
+		&__text
+			color: #444444
+			font-size: 17px
+			line-height: 28px
+			br
+				font-size: 17px
+			+r(1023)
+				br
+					display: none
+			+r(639)
+				line-height: 22px
+	.row-center
+		position: absolute
+		left: 432px
+		top: 72px
+		z-index: 2
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			width: 268px
+			height: 464px
+			background: url('../img/pack-before.png') no-repeat center
+			top: -60px
+			left: -15px
+			z-index: -1
+		+r(1189)
+			width: 220px
+			left: 382px
+			top: 32px
+			&::before
+				width: 150px
+				background-size: contain
+				top: -20px
+				left: -35px
+		+r(1023)
+			width: 210px
+			left: 49%
+			top: 162px
+			transform: translateX(-50%)
+			&::before
+				display: none
+		+r(767)
+			display: none
