@@ -1,5 +1,60 @@
-<section class="popup">
-	<div class="container">
-
+<div class="ever-popup-build">
+	<div class="my-popup" id="cloneThis">
+		<div class="popup__wrap">
+			<div class="popup__pack">
+				<div class="pack-abs">
+					<div class="pack-abs-pakcBox"><img alt="Mikocin" class="pack-abs__pack" src="img/pack.png"> </div>
+				</div>
+			</div>
+			<div class="popup__form">
+				<div class="form">
+					<div class="form-top">
+						<div class="form-top__title">
+							Успейте заказать<br>
+							со скидкой<br>
+							<span class="form-top__date">до <span class="date-0">15.01.2019</span></span>
+						</div>
+						<div class="price">
+							<div class="price-old">
+								<div class="price-old__title">
+									Старая цена
+								</div>
+								<div class="price-old__count">
+									<span class="x_price_previous">1980</span><span class="x_currency">руб</span>
+								</div>
+							</div>
+							<div class="price-new">
+								<div class="price-new__title">
+									Новая цена
+								</div>
+								<div class="price-new__count">
+									<span class="x_price_current">990</span><span class="x_currency">руб</span><span class="star">*</span>
+								</div>
+							</div>
+						</div>
+						<div class="form-top__pack">
+							Осталось упаковок<br>
+							со скидкой: <span class="orange lastpack">15</span>
+						</div>
+					</div>
+					<form action="/submit" class="x_order_form" method="post">
+						<div class="form__input-name">
+							<input autocomplete="name" class="form__input" name="name" placeholder="Моё имя" required="" type="text">
+						</div>
+						<div class="form__input-phone">
+							<input autocomplete="tel" class="form__input" name="phone" placeholder="Мой телефон" required="" type="tel">
+						</div><button class="form__btn btn" type="/submit">Заказать <span class="form__btn_size">со скидкой</span></button>
+					</form>
+					<div class="info-price">
+						* при заказе курса
+					</div>
+					<div class="form-pay">
+						<div class="form-pay__text">
+							Оплата после получения
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</section>
+</div>

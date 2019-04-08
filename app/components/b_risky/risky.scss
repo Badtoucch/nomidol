@@ -212,7 +212,7 @@ margin-top: 140px;
 	}
 	.img-bb1,.img-bb3,.img-bb4{
 		&:before{
-			display: none;
+			opacity: 0;
 		}
 	}
 }
@@ -221,7 +221,7 @@ margin-top: 140px;
 		animation: none;
 
 		&:before{
-			display: none;
+			opacity: 0;
 		
 		}
 	}
@@ -232,7 +232,7 @@ margin-top: 140px;
 	}
 	.img-bb2,.img-bb3,.img-bb1{
 		&:before{
-			display: none;
+			opacity: 0;
 		}
 	}
 }
@@ -241,7 +241,7 @@ margin-top: 140px;
 		animation: none;
 
 		&:before{
-			display: none;
+			opacity: 0;
 			
 		}
 	}
@@ -252,7 +252,7 @@ margin-top: 140px;
 	}
 	.img-bb2,.img-bb1,.img-bb4{
 		&:before{
-			display: none;
+			opacity: 0;
 		
 		}
 	}
@@ -262,7 +262,7 @@ margin-top: 140px;
 		animation: none;
 	
 		&:before{
-			display: none;
+			opacity: 0;
 		}
 	
 	}
@@ -273,7 +273,7 @@ margin-top: 140px;
 	}
 	.img-bb2,.img-bb4,.img-bb3{
 		&:before{
-			display: none;
+			opacity: 0;
 		
 		}
 	}
@@ -427,6 +427,9 @@ margin-top: 140px;
 .thesis-box {
 	font-size: 19px;
 	margin-top: 25px;}
+	.risky-item__img:before{
+		display: none;
+	}
 }
 @include r(639) {
 .risky-content{
