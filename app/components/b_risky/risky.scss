@@ -36,7 +36,10 @@ height: 467px;
    
     bottom: 0px;
     box-shadow: 0 0 100px rgba(158, 130, 39, 0.08);
-    animation: pulse2 2s infinite;
+		animation: pulse2 2s infinite;
+		&:before{
+			transition: opacity 1s ease-in-out;
+		}
 		}
 		.inn-pulse {
 			display: block;
@@ -113,6 +116,8 @@ line-height: 28px;
 			border-bottom: 1px solid #ddd;
 			border-left: 1px solid #ddd;
 			z-index: 5;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
 		}
 		
 	}
@@ -132,6 +137,8 @@ line-height: 28px;
 			border-top: 1px solid #ddd;
 			border-right: 1px solid #ddd;
 			z-index: 5;
+			opacity: 1;
+			transition: opacity 1s ease-in-out;
 		}
 	}
 	.pulse3{
@@ -149,6 +156,8 @@ line-height: 28px;
 			border-top: 1px solid #ddd;
 			border-left: 1px solid #ddd;
 			z-index: 5;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
 		}
 		
 	}
@@ -166,6 +175,8 @@ line-height: 28px;
 			border-top: 1px solid #ddd;
 			border-right: 1px solid #ddd;
 			z-index: 5;
+			opacity: 0;
+			transition: opacity 1s ease-in-out;
 		}
 	}
 }
@@ -187,8 +198,16 @@ margin-top: 140px;
 
 .ractive1{
 	.pulse1,.pulse3,.pulse4{
+		animation: none;
+
 		&:before{
 			display: none;
+			opacity: 1;
+		}
+	}
+	.pulse2{
+		&:before{
+			opacity: 1;
 		}
 	}
 	.img-bb1,.img-bb3,.img-bb4{
@@ -199,11 +218,19 @@ margin-top: 140px;
 }
 .ractive2{
 	.pulse2,.pulse3,.pulse4{
+		animation: none;
+
 		&:before{
 			display: none;
+		
 		}
 	}
-	.img-bb2,.img-bb3,.img-bb4{
+	.pulse1{
+		&:before{
+			opacity: 1;
+		}
+	}
+	.img-bb2,.img-bb3,.img-bb1{
 		&:before{
 			display: none;
 		}
@@ -211,25 +238,43 @@ margin-top: 140px;
 }
 .ractive3{
 	.pulse2,.pulse1,.pulse4{
+		animation: none;
+
 		&:before{
 			display: none;
+			
+		}
+	}
+	.pulse3{
+		&:before{
+			opacity: 1;
 		}
 	}
 	.img-bb2,.img-bb1,.img-bb4{
 		&:before{
 			display: none;
+		
 		}
 	}
 }
 .ractive4{
 	.pulse2,.pulse1,.pulse3{
+		animation: none;
+	
 		&:before{
 			display: none;
 		}
+	
 	}
-	.img-bb2,.img-bb1,.img-bb3{
+	.pulse4{
+		&:before{
+			opacity: 1;
+		}
+	}
+	.img-bb2,.img-bb4,.img-bb3{
 		&:before{
 			display: none;
+		
 		}
 	}
 }
@@ -265,5 +310,137 @@ margin-top: 140px;
 100% {
     -webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+}
+}
+
+@include r(1189) {
+	.risky{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		&-content{
+			margin-top: 0;
+		}
+		&-foot{
+			width: 388px;
+			height: 388px;
+			.foot{
+				width: 200px;
+			}
+		}
+	}
+	.risky-item:first-child {
+    margin-bottom: 30px;
+}
+.risky-item__text{
+	font-size: 18px;
+	line-height: normal;
+	margin-top: 3px;
+}
+.risky .pulse2{
+	top: 160px;
+}
+.risky .pulse2:before{
+	width: 281px;
+	height: 188px;
+}
+.risky .pulse1{
+	top: -18px;
+}
+.risky .pulse1:before{
+	height: 183px;
+}
+.risky .pulse3:before{
+	height: 296px;
+	
+}
+.risky .pulse4:before{
+	height: 296px;
+	width: 255px;
+    height: 125px;
+}
+.thesis-box{
+	font-size: 22px;
+	margin-top: 100px;
+	max-width: 728px;
+}
+}
+@include r(1023) {
+	.risky-foot {
+    width: 288px;
+    height: 288px;
+}
+.risky-foot .foot {
+	width: 140px;
+}
+.risky-item__img{
+	border: 6px solid #fff3e6;
+	width: 110px;
+}
+.risky-item__img:before{
+	width: 94px;
+    height: 94px;
+}
+.risky-item__text{
+	font-size: 17px;
+}
+.risky-center{
+	margin-top: 60px;
+}
+.risky-content {
+	margin-top: 24px;
+}
+.risky .pulse1:before {
+	height: 152px;
+}
+.risky .pulse2 {
+	top: 97px;
+	transform: translateX(28%);
+}
+.risky .pulse2:before {
+	width: 225px;
+	height: 134px;
+}
+.risky .pulse3:before {
+	height: 203px;
+}
+.risky .pulse4:before {
+	width: 205px;
+	height: 60px;
+}
+.thesis-box {
+	font-size: 20px;
+	margin-top: 40px;
+	max-width: 651px;
+	padding: 12px 10px;
+}
+}
+@include r(767) {
+	.risky-center{
+		display: none;
+	}
+	.risky-content {
+    margin-top: 15px;
+}
+.risky-item:first-child {
+	margin-bottom: 20px;
+}
+.thesis-box {
+	font-size: 19px;
+	margin-top: 25px;}
+}
+@include r(639) {
+.risky-content{
+	flex-wrap: wrap;
+}
+.risky-left, .risky-right{
+	width: 225px;
+}
+.thesis-box {
+	font-size: 18px;
+	margin-top: 10px;
+	padding: 10px;
+}
+.risky-item {
+	margin-bottom: 15px;
 }
 }
